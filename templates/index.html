@@ -1,0 +1,143 @@
+
+<!DOCTYPE html>
+<html ng-app="myapp">
+
+    <head>
+        <title>Test | Front End Web Developer</title>
+        <link type="text/css" rel="stylesheet" href="/static/css/style.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.13/angular.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.13/angular-route.min.js"></script>
+        <script src="/static/js/app.js"></script>
+    </head> 
+    
+    <body>
+        
+        <ul id="changelist" ng-controller="changelistController">
+        
+            <div style="text-align: center; color: red;font-size: 15px;" ng-show="errorMsg" >
+                {[ errorMsg ]}
+            </div>
+            
+            </br>
+        
+            <li class="head">
+                <div class="w20 left">Changelist / Build</div>
+                <div class="w10">Owner</div>
+                <div class="w20">Time Started</div>
+                <div class="w10">State</div>
+                <div class="w10">Metrics</div>
+                <div class="w10">Build</div>
+                <div class="w10">Unit Test</div>
+                <div class="w10">Functional Test</div>
+            </li>
+            <li ng-repeat="item in items" ng-click="expand(item)" class="item {[item.state]} {[item.type]}">
+                <div class="w5 type-image"></div>
+                <div class="w15 left">{[item.description]}</div>
+                <div class="w10">{[item.owner]}</div>
+                <div class="w20">{[item.date]}</div>
+                <div class="w10 state">{[item.state]}</div>
+                <div class="w10">
+                    <div ng-hide="item.show" class="box {[item.metrics.state]}"><div></div></div>
+                </div>
+                <div class="w10">
+                    <div ng-hide="item.show" class="box {[item.build.state]}"><div></div></div>
+                </div>
+                <div class="w10">
+                    <div ng-hide="item.show" class="box {[item.unit.state]}"><div></div></div>
+                </div>
+                <div class="w10">
+                    <div ng-hide="item.show" class="box {[item.functional.state]}"><div></div></div>
+                </div>
+                <ul class="subdetails" ng-show="item.show">
+                    <li class="metrics {[item.metrics.state]}">
+                        <h3>Metrics</h3>
+                        <div class="test">
+                            <div class="image">{[item.metrics.test]}</div>
+                            <div class="text">Test</div>
+                        </div>
+                        <div class="maintainability">
+                            <div class="image">{[item.metrics.maintainability]}</div>
+                            <div class="text">Maintainability</div>
+                        </div>
+                        <div class="security">
+                            <div class="image">{[item.metrics.security]}</div>
+                            <div class="text">Security</div>
+                        </div>
+                        <div class="workmanship">
+                            <div class="image">{[item.metrics.workmanship]}</div>
+                            <div class="text">Workmanship</div>
+                        </div>
+                    </li>
+                    <li class="build {[item.build.state]}">
+                        <h3>Build</h3>
+                        <div class="debug">
+                            <div class="image"></div>
+                            <div class="text">Debug</div>
+                        </div>
+                        <div class="release">
+                            <div class="image"></div>
+                            <div class="text">Release</div>
+                        </div>
+                        <div class="date">{[item.build.date]}</div>
+                    </li>
+                    <li class="unit {[item.unit.state]}">
+                        <h3>Unit Test</h3>
+                        <div class="chart" style="background:url(static/img/{[item.unit.chart]}) no-repeat center center"></div>
+                        <div class="percent">
+                            <div class="percent_number">{[item.unit.percent]}%</div>
+                            <div class="percent_text">tests passed</div>
+                        </div>
+                        <div class="bar">
+                            <div class="bar_percent" style="width:{[item.unit.covered]}%;"></div>
+                            <div class="bar_text">
+                                <span>{[item.unit.covered]}%</span>
+                                <span>code covered</span>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="functional {[item.functional.state]}">
+                        <h3>Functional Test</h3>
+                        <div class="chart" style="background:url(static/img/{[item.functional.chart]}) no-repeat center center"></div>
+                        <div class="percent">
+                            <div class="percent_number">{[item.functional.percent]}%</div>
+                            <div class="percent_text">tests passed</div>
+                        </div>
+                        <div class="bar">
+                            <div class="bar_percent" style="width:{[item.functional.covered]}%;"></div>
+                            <div class="bar_text">
+                                <span>{[item.functional.covered]}%</span>
+                                <span>code covered</span>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="results {[item.state]}">
+                        <div ng-switch on="item.type">
+                            <div ng-switch-when="firewall">
+                                <div class="title">Result:</div>
+                                <div>Change <span class="state_desc">{[item.state]}</span></div>
+                                <div class="message">{[item.result.message]}</div>
+                                <button ng-click="notImplemented();$event.stopPropagation();">{[item.result.button]}</button>
+                            </div>
+                            <div ng-switch-default>
+                                <div class="title">Result:</div>
+                                <div class="message">
+                                    <span class="state_desc">{[item.state]}</span>
+                                </div>
+                                <div class="action">
+                                    <button ng-click="notImplemented();$event.stopPropagation();">Deploy</button>
+                                    <span>to</span>
+                                    <select ng-click="$event.stopPropagation();">
+                                        <option value="Production">Production</option>
+                                        <option value="Production">UAT</option>
+                                        <option value="Production">Devel</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                <ul>
+            </li>
+        </ul>
+    </body>
+    
+</html>

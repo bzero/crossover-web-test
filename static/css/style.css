@@ -1,0 +1,86 @@
+@CHARSET "UTF-8";
+* { margin: 0; padding: 0; font-family: sans-serif, Arial; font-size: 11px; }
+
+html, body { margin: 0; padding: 0; }
+
+#changelist { margin: 35px; width: 95%; list-style: none; }
+#changelist > li > div { float: left; overflow: hidden; }
+#changelist .left { text-align: left !important; }
+#changelist .state { text-transform: capitalize; }
+#changelist .w5 { width: 5%; }
+#changelist .w9 { width: 9%; }
+#changelist .w10 { width: 10%; }
+#changelist .w13 { width: 13%; }
+#changelist .w15 { width: 15%; }
+#changelist .w20 { width: 20%; }
+#changelist .head { height: 26px; line-height: 26px; }
+#changelist .head > div { text-align: center; }
+#changelist .item { float: left; width: 100%; line-height: 22px; margin-bottom: 7px; border: 1px solid #CBCDCF; cursor: pointer; background: -webkit-linear-gradient(left, #eaeff7 0%, white 50%, white 100%) !important; background: -webkit-gradient(linear, left top, right top, color-stop(0%, #eaeff7), color-stop(50%, white) color-stop(100%, white)) !important; background: -moz-linear-gradient(left, #eaeff7 0%, white 50%, white 100%) !important; background: -o-linear-gradient(left, #eaeff7 0%, white 50%, white 100%) !important; background: -ms-linear-gradient(left, #eaeff7 0%, white 50%, white 100%) !important; background: linear-gradient(left, #eaeff7 0%, white 50%, white 100%) !important; filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#eaeff7', endColorstr='white') !important; }
+#changelist .item > div { color: #8F9091; text-align: center; padding: 2px 5px; min-height: 28px; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; -o-box-sizing: border-box; -ms-box-sizing: border-box; box-sizing: border-box; }
+#changelist .item.firewall > div.type-image { background: url(../img/firewall_gray.jpg) no-repeat left 5px center; }
+#changelist .item.build > div.type-image { background: url(../img/build_gray.jpg) no-repeat left 5px center; }
+#changelist .item.pending { cursor: default; }
+#changelist .item.pending .subdetails { padding: 0px; }
+#changelist .item.running { cursor: default; border-color: #6395C3 !important; background: -webkit-linear-gradient(left, #eaeff7 0%, white 50%, white 100%) !important; background: -webkit-gradient(linear, left top, right top, color-stop(0%, #eaeff7), color-stop(50%, white) color-stop(100%, white)) !important; background: -moz-linear-gradient(left, #eaeff7 0%, white 50%, white 100%) !important; background: -o-linear-gradient(left, #eaeff7 0%, white 50%, white 100%) !important; background: -ms-linear-gradient(left, #eaeff7 0%, white 50%, white 100%) !important; background: linear-gradient(left, #eaeff7 0%, white 50%, white 100%) !important; filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#eaeff7', endColorstr='white') !important; }
+#changelist .item.running .subdetails { padding: 0px; }
+#changelist .item.running > div { color: #43587D !important; }
+#changelist .item.running.firewall > div.type-image { background: url(../img/firewall_blue.jpg) no-repeat left 5px center; }
+#changelist .item.running.build > div.type-image { background: url(../img/build_blue.jpg) no-repeat left 5px center; }
+#changelist .item.accepted, #changelist .item.succeed, #changelist .item.complete { border-color: #74A354 !important; background: -webkit-linear-gradient(left, #edf2eb 0%, white 50%, white 100%) !important; background: -webkit-gradient(linear, left top, right top, color-stop(0%, #edf2eb), color-stop(50%, white) color-stop(100%, white)) !important; background: -moz-linear-gradient(left, #edf2eb 0%, white 50%, white 100%) !important; background: -o-linear-gradient(left, #edf2eb 0%, white 50%, white 100%) !important; background: -ms-linear-gradient(left, #edf2eb 0%, white 50%, white 100%) !important; background: linear-gradient(left, #edf2eb 0%, white 50%, white 100%) !important; filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#edf2eb', endColorstr='white') !important; }
+#changelist .item.accepted > div, #changelist .item.succeed > div, #changelist .item.complete > div { color: #4C683A !important; }
+#changelist .item.accepted.firewall > div.type-image, #changelist .item.succeed.firewall > div.type-image, #changelist .item.complete.firewall > div.type-image { background: url(../img/firewall_green.jpg) no-repeat left 5px center; }
+#changelist .item.accepted.build > div.type-image, #changelist .item.succeed.build > div.type-image, #changelist .item.complete.build > div.type-image { background: url(../img/build_green.jpg) no-repeat left 5px center; }
+#changelist .item.rejected, #changelist .item.fail { border-color: #CC3030 !important; background: -webkit-linear-gradient(left, #fce0e0 0%, white 50%, white 100%) !important; background: -webkit-gradient(linear, left top, right top, color-stop(0%, #fce0e0), color-stop(50%, white) color-stop(100%, white)) !important; background: -moz-linear-gradient(left, #fce0e0 0%, white 50%, white 100%) !important; background: -o-linear-gradient(left, #fce0e0 0%, white 50%, white 100%) !important; background: -ms-linear-gradient(left, #fce0e0 0%, white 50%, white 100%) !important; background: linear-gradient(left, #fce0e0 0%, white 50%, white 100%) !important; filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#fce0e0', endColorstr='white') !important; }
+#changelist .item.rejected > div, #changelist .item.fail > div { color: #C61818 !important; }
+#changelist .item.rejected.firewall > div.type-image, #changelist .item.fail.firewall > div.type-image { background: url(../img/firewall_red.jpg) no-repeat left 5px center; }
+#changelist .item.rejected.build > div.type-image, #changelist .item.fail.build > div.type-image { background: url(../img/build_red.jpg) no-repeat left 5px center; }
+#changelist .item .box { width: 28px; height: 20px; background-color: #d8d8d8; border: 1px solid #CDCDCD; margin: 2px auto; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; -o-box-sizing: border-box; -ms-box-sizing: border-box; box-sizing: border-box; }
+#changelist .item .box > div { width: 100%; height: 100%; background-color: #d8d8d8; }
+#changelist .item .box.running > div { width: 60%; background-color: #5B9BD5; }
+#changelist .item .box.accepted > div, #changelist .item .box.succeed > div, #changelist .item .box.complete > div { background-color: #538135; }
+#changelist .item .box.rejected > div, #changelist .item .box.fail > div { background-color: #C00000; }
+#changelist .item .subdetails { width: 100%; float: left; list-style: none; padding: 10px; height: 155px; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; -o-box-sizing: border-box; -ms-box-sizing: border-box; box-sizing: border-box; }
+#changelist .item .subdetails > li { float: left; width: 138px; height: 135px; padding: 3px 7px; margin-right: 10px; background-color: #fff; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; -o-box-sizing: border-box; -ms-box-sizing: border-box; box-sizing: border-box; -webkit-box-shadow: 2px 2px 8px 0px rgba(0, 0, 0, 0.5); -moz-box-shadow: 2px 2px 8px 0px rgba(0, 0, 0, 0.5); -o-box-shadow: 2px 2px 8px 0px rgba(0, 0, 0, 0.5); -ms-box-shadow: 2px 2px 8px 0px rgba(0, 0, 0, 0.5); box-shadow: 2px 2px 8px 0px rgba(0, 0, 0, 0.5); }
+#changelist .item .subdetails > li:last-of-type { margin-right: 0px; }
+#changelist .item .subdetails > li h3 { font-size: 11.5px; margin-bottom: 6px; }
+#changelist .item .subdetails > li.pending, #changelist .item .subdetails > li.running { display: none; }
+#changelist .item .subdetails > li.accepted, #changelist .item .subdetails > li.succeed, #changelist .item .subdetails > li.complete { border: 1px solid #74A354 !important; }
+#changelist .item .subdetails > li.accepted h3, #changelist .item .subdetails > li.succeed h3, #changelist .item .subdetails > li.complete h3 { color: #4C683A !important; }
+#changelist .item .subdetails > li.rejected, #changelist .item .subdetails > li.fail { border: 1px solid #CC3030 !important; }
+#changelist .item .subdetails > li.rejected h3, #changelist .item .subdetails > li.fail h3 { color: #C61818 !important; }
+#changelist .item .subdetails > li.metrics > div { float: left; width: 50%; text-align: center; }
+#changelist .item .subdetails > li.metrics > div .image { height: 32px; line-height: 32px; font-size: 11px; }
+#changelist .item .subdetails > li.metrics > div .text { font-size: 9px; line-height: 17px; }
+#changelist .item .subdetails > li.metrics > div.test > .image { color: #fff; background: url(../img/arrow_green.png) no-repeat center center; }
+#changelist .item .subdetails > li.metrics > div.maintainability > .image { color: #fff; background: url(../img/arrow_red.png) no-repeat center center; }
+#changelist .item .subdetails > li.metrics > div.security > .image { color: #000; background: url(../img/arrow_yellow.png) no-repeat center center; }
+#changelist .item .subdetails > li.metrics > div.workmanship > .image { color: #000; background: url(../img/arrow_yellow.png) no-repeat center center; }
+#changelist .item .subdetails > li.build > div { float: left; text-align: center; }
+#changelist .item .subdetails > li.build > div .image { height: 42px; background: url(../img/pc.png) no-repeat center center; }
+#changelist .item .subdetails > li.build > div.debug, #changelist .item .subdetails > li.build > div.release { float: left; width: 50%; color: #3E6487; }
+#changelist .item .subdetails > li.build > div.date { clear: both; float: left; width: 100%; margin-top: 14px; font-size: 10px; }
+#changelist .item .subdetails > li.unit > div, #changelist .item .subdetails > li.functional > div { float: left; }
+#changelist .item .subdetails > li.unit > div.chart, #changelist .item .subdetails > li.unit > div.percent, #changelist .item .subdetails > li.functional > div.chart, #changelist .item .subdetails > li.functional > div.percent { float: left; width: 50%; height: 55px; margin-top: 2px; text-align: center; }
+#changelist .item .subdetails > li.unit > div.percent .percent_number, #changelist .item .subdetails > li.functional > div.percent .percent_number { font-size: 22px; font-weight: bold; color: #A4C943; padding-top: 15px; }
+#changelist .item .subdetails > li.unit > div.percent .percent_text, #changelist .item .subdetails > li.functional > div.percent .percent_text { font-size: 8px; margin-top: -5px; }
+#changelist .item .subdetails > li.unit > div.bar, #changelist .item .subdetails > li.functional > div.bar { height: 27px; width: 100%; background-color: #F7CBAC; position: relative; margin-top: 10px; }
+#changelist .item .subdetails > li.unit > div.bar > div, #changelist .item .subdetails > li.functional > div.bar > div { position: absolute; }
+#changelist .item .subdetails > li.unit > div.bar > div.bar_percent, #changelist .item .subdetails > li.functional > div.bar > div.bar_percent { background-color: #C5E0B3; height: 100%; }
+#changelist .item .subdetails > li.unit > div.bar > div.bar_text, #changelist .item .subdetails > li.functional > div.bar > div.bar_text { text-align: center; width: 100%; }
+#changelist .item .subdetails > li.unit > div.bar > div.bar_text > span, #changelist .item .subdetails > li.functional > div.bar > div.bar_text > span { display: block; width: 100%; }
+#changelist .item .subdetails > li.unit > div.bar > div.bar_text > span:first-child, #changelist .item .subdetails > li.functional > div.bar > div.bar_text > span:first-child { color: #375623; font-weight: bold; font-size: 12px; line-height: 17px; }
+#changelist .item .subdetails > li.unit > div.bar > div.bar_text > span:last-child, #changelist .item .subdetails > li.functional > div.bar > div.bar_text > span:last-child { font-size: 8px; line-height: 8px; font-weight: bold; }
+#changelist .item .subdetails > li.results { background-color: transparent; border: none !important; -webkit-box-shadow: none; -moz-box-shadow: none; -o-box-shadow: none; -ms-box-shadow: none; box-shadow: none; }
+#changelist .item .subdetails > li.results.pending, #changelist .item .subdetails > li.results.running { display: none; }
+#changelist .item .subdetails > li.results.accepted { color: #FEC000 !important; }
+#changelist .item .subdetails > li.results.succeed, #changelist .item .subdetails > li.results.complete { color: #4C683A !important; }
+#changelist .item .subdetails > li.results.rejected, #changelist .item .subdetails > li.results.fail { color: #C61818 !important; }
+#changelist .item .subdetails > li.results > div > div { text-align: center; }
+#changelist .item .subdetails > li.results > div > div .title { font-weight: bold; color: #000; }
+#changelist .item .subdetails > li.results > div > div .message { margin-bottom: 10px; font-size: 20px; }
+#changelist .item .subdetails > li.results > div > div .message > .state_desc { font-size: 20px; }
+#changelist .item .subdetails > li.results > div > div .action > span { display: block; color: #000; }
+#changelist .item .subdetails > li.results > div > div button { background-color: #5B9BD5; color: #fff; border: 1px solid #CFCFCF; padding: 3px 7px; font-size: 10px; cursor: pointer; }
+#changelist .item .subdetails > li.results > div > div button:hover { background-color: #3079BC; }
+#changelist .item .subdetails > li.results > div > div select { border: 1px solid #5B9BD5; color: #5B9BD5; font-size: 10px; padding: 2px; }
+#changelist .item .subdetails > li.results .state_desc { text-transform: capitalize; }

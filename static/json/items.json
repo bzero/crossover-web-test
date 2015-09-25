@@ -1,0 +1,176 @@
+{
+
+    "changelist": [
+
+        {
+            "description": "Tenrox-R1_1235",
+			"owner": "",
+			"type": "build",
+			"state": "pending",
+			"date": "",
+			"metrics": {
+				"state": "pending"
+			},
+			"build": {
+				"state": "pending"
+			},
+			"unit": {
+				"state": "pending"
+			},
+			"functional": {
+				"state": "pending"
+			}
+        },
+		
+        {
+			"description": "432462",
+			"owner": "jtuck",
+			"type": "firewall",
+			"state": "running",
+			"date": "4/18/2014 12:12pm",
+			"metrics": {
+				"state": "running"
+			},
+			"build": {
+				"state": "pending"
+			},
+			"unit": {
+				"state": "pending"
+			},
+			"functional": {
+				"state": "pending"
+			}
+		},
+		
+		{
+			"description": "432461",
+			"owner": "samy",
+			"type": "firewall",
+			"state": "rejected",
+			"date": "4/18/2014 10:53am",
+			"metrics": {
+				"state": "rejected",
+				"test": "64",
+				"maintainability": "53",
+				"security": "64",
+				"workmanship": "72"
+			},
+			"build": {
+				"state": "accepted",
+				"date": "10:46am - 4/17/2014"
+			},
+			"unit": {
+				"state": "accepted",
+				"chart": "chart-unit.png",
+				"percent": "73",
+				"covered": "76"
+			},
+			"functional": {
+				"state": "accepted",
+				"chart": "chart-functional.png",
+				"percent": "68",
+				"covered": "23"
+			},
+			"result": {
+				"message": "Metrics Reduction",
+				"button": "Find Issues"
+			}
+		},
+		
+		{
+			"description": "Tenrox-R1_1234",
+			"owner": "",
+			"type": "build",
+			"state": "complete",
+			"date": "4/17/2014 9:42am",
+			"metrics": {
+				"state": "complete",
+				"test": "64",
+				"maintainability": "53",
+				"security": "64",
+				"workmanship": "72"
+			},
+			"build": {
+				"state": "complete",
+				"date": "10:46am - 4/17/2014"
+			},
+			"unit": {
+				"state": "complete",
+				"chart": "chart-unit.png",
+				"percent": "73",
+				"covered": "76"
+			},
+			"functional": {
+				"state": "complete",
+				"chart": "chart-functional.png",
+				"percent": "68",
+				"covered": "23"
+			}
+		},
+		
+		{
+			"description": "432460",
+			"owner": "samy",
+			"type": "firewall",
+			"state": "rejected",
+			"date": "4/17/2014 7:51am",
+			"metrics": {
+				"state": "rejected",
+				"test": "64",
+				"maintainability": "53",
+				"security": "64",
+				"workmanship": "72"
+			},
+			"build": {
+				"state": "pending"
+			},
+			"unit": {
+				"state": "pending"
+			},
+			"functional": {
+				"state": "pending"
+			},
+			"result": {
+				"message": "Metrics Reduction",
+				"button": "Find Issues"
+			}
+		},
+		
+		{
+			"description": "432459",
+			"owner": "samy",
+			"type": "firewall",
+			"state": "accepted",
+			"date": "4/16/2014 6:43am",
+			"metrics": {
+				"state": "accepted",
+				"test": "64",
+				"maintainability": "53",
+				"security": "64",
+				"workmanship": "72"
+			},
+			"build": {
+				"state": "accepted",
+				"date": "10:46am - 4/17/2014"
+			},
+			"unit": {
+				"state": "accepted",
+				"chart": "chart-unit.png",
+				"percent": "73",
+				"covered": "76"
+			},
+			"functional": {
+				"state": "accepted",
+				"chart": "chart-functional.png",
+				"percent": "68",
+				"covered": "23"
+			},
+			"result": {
+				"message": "Auto-Merged",
+				"button": "Merged Build"
+			}
+		}
+		
+	]
+	
+}
